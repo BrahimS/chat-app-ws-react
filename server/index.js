@@ -12,9 +12,9 @@ wss.on('connection', (ws) => {
 
     // Diffuser le message à tous les clients
     wss.clients.forEach((client) => {
-      if (client.readyState === ws.OPEN) {
-        client.send(message.toString());
-      }
+            if (client.readyState === ws.OPEN) {
+              client.send(message.toString());
+            }
     });
   });
   ws.on('close', () => {
